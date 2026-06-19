@@ -16,16 +16,6 @@ A single modified value will propagate through the tree and generate a completel
 
 ---
 
-## 🎯 Objectives
-
-* Protect F1 telemetry data against unauthorized modification.
-* Detect data tampering efficiently.
-* Simulate Man-in-the-Middle (MitM) attacks.
-* Demonstrate efficient verification using Merkle Proofs.
-* Evaluate computational feasibility for high-frequency telemetry environments.
-
----
-
 ## 📊 Dataset
 
 The implementation uses real Formula 1 telemetry data obtained through the FastF1 Python library.
@@ -99,41 +89,6 @@ The leaf hashes are recursively combined until a single Merkle Root is generated
 
 Any modification to any telemetry value changes the corresponding leaf hash and ultimately changes the Merkle Root.
 
----
-
-## ⚔️ Threat Model
-
-### 1. Data Tampering
-
-An attacker modifies telemetry values stored in the system.
-
-Example:
-
-```text
-Speed: 298 km/h → 999 km/h
-```
-
-Result:
-
-* Leaf hash changes
-* Parent hashes change
-* Merkle Root changes
-
----
-
-### 2. Man-in-the-Middle (MitM)
-
-An attacker intercepts telemetry data during wireless transmission.
-
-```text
-Car → Attacker → Pit Wall
-```
-
-The receiver verifies incoming data against the trusted Merkle Root.
-
-Any modification will cause verification failure.
-
----
 
 ## 🧪 Experimental Results
 
@@ -183,18 +138,6 @@ For this dataset:
 * Hash performance analysis
 
 ---
-
-## 🛠️ Technologies Used
-
-* Python
-* FastF1
-* Pandas
-* hashlib
-* Matplotlib
-* JSON
-
----
-
 ## 🚀 Installation
 
 Clone the repository:
