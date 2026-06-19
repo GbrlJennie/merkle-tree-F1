@@ -125,7 +125,7 @@ For this dataset:
 
 ## 📂 Notebook Contents
 
-`datatelemetry.ipynb` includes:
+`merkle_tree_f1.ipynb` includes:
 
 * F1 telemetry extraction using FastF1
 * Data preprocessing
@@ -157,7 +157,7 @@ pip install fastf1 pandas matplotlib numpy
 Run the notebook:
 
 ```bash
-jupyter notebook datatelemetry.ipynb
+jupyter notebook merkle_tree_f1.ipynb
 ```
 
 ---
